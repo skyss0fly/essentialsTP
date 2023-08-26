@@ -143,13 +143,22 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
     }
 
     public function onPlayerDeath(PlayerDeathEvent $event){
-        $player = $event->getEntity();
+        /* $player = $event->getEntity();
         $this->death_loc[$player->getName()] = new Position(
             round($player->getX()),
             round($player->getY()),
             round($player->getZ()),
             $player->getWorld()
-        );
+        ); */
+	    // could work
+	    
+	    $player = $event->getPlayer();
+	    $this->death_loc[$player->getName()] = new Position (
+		    round($player->getX()),
+		    round($player->getY()),
+		    round($player->getZ()),
+		    $player ->getWorld()
+		    );
     }
 
     public function onPlayerSleep(PlayerBedEnterEvent $event){
