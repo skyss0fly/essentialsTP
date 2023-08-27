@@ -1365,7 +1365,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
         $this->getLogger()->info(TextFormat::GREEN."[INFO] loading [".TextFormat::GOLD."config.yml".TextFormat::GREEN."]....");
         $this->tpa_cooldown = time() - $this->config->get("tpa-here-cooldown");
         $this->getLogger()->info(TextFormat::GREEN."[INFO] loading [".TextFormat::GOLD."config.yml".TextFormat::GREEN."] DONE");
-        $this->getLogger()->info(TextFormat::GREEN."essentialsTP+ loaded!");
+        $this->getLogger()->info(TextFormat::GREEN."essentialsTP+ loaded! | Updated by skyss0fly");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
